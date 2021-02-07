@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".AdressesActivity">
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/travelWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Walk"
+        android:textOff="Vehicle"
+        android:textOn="Walk"
+        app:layout_constraintEnd_toStartOf="@+id/isSircularButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/isSircularButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Circular"
+        android:textOff="Hebelek"
+        android:textOn="Circular"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textOff="Non-circular" />
 </androidx.constraintlayout.widget.ConstraintLayout>
