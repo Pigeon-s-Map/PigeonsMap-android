@@ -1,0 +1,16 @@
+com/example/pigeonsmap_android/MapActivity.java
+ com.example.pigeonsmap_android.MapActivity
+com/example/pigeonsmap_android/MainActivity.java
+ com.example.pigeonsmap_android.MainActivity
+ com.example.pigeonsmap_android.MainActivity$1
+ com.example.pigeonsmap_android.MainActivity$2
+ com.example.pigeonsmap_android.MainActivity$3
+com/example/pigeonsmap_android/AdressesActivity.java
+ com.example.pigeonsmap_android.AdressesActivity
+ com.example.pigeonsmap_android.AdressesActivity$1
+com/example/pigeonsmap_android/LoginActivity.java
+ com.example.pigeonsmap_android.LoginActivity
+com/example/pigeonsmap_android/RegisterActivity.java
+ com.example.pigeonsmap_android.RegisterActivity
+com/example/pigeonsmap_android/BuildConfig.java
+ com.example.pigeonsmap_android.BuildConfig
