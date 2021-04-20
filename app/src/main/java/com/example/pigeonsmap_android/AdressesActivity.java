@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,8 @@ import java.util.List;
 public class AdressesActivity extends AppCompatActivity {
     private ArrayList<EditText> addressBoxes;
     private Button addAddressButton;
+    private Button doneButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,7 @@ public class AdressesActivity extends AppCompatActivity {
 
         LinearLayout layout = (LinearLayout) findViewById(R.id.oll);
         addAddressButton = (Button) findViewById(R.id.addr);
+        doneButton = (Button) findViewById(R.id.done);
         addressBoxes = new ArrayList<EditText>();
         Context c = this;
         addressBoxes.add(new EditText(this));
@@ -39,6 +43,13 @@ public class AdressesActivity extends AppCompatActivity {
                 layout.removeView(addAddressButton);
                 layout.addView(addressBoxes.get(addressBoxes.size()-1));
                 layout.addView(addAddressButton);
+            }
+        });
+
+        doneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdressesActivity.this, MapActivity.class));
             }
         });
 
