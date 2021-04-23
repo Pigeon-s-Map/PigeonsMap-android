@@ -12,27 +12,21 @@ public class Route {
 
     public boolean calculate()
     {
-
-
+        
         return false;
     }
 
     public void addLocation(Location location)
     {
-
-
-        return;
+        locations.add(location);
     }
     public void removeLocation(Location location)
     {
-
-
-        return;
+        locations.remove(location);
     }
 
     public boolean update()
     {
-
 
         return false;
     }
