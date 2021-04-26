@@ -10,6 +10,26 @@ public class User {
     Route route;
     List<Route> savedRoutes;
 
+    public User()
+    {
+        this.settings = null;
+        this.warnings = null;
+        this.location = null;
+        this.route = null;
+        this.savedRoutes = null;
+    }
+
+    public User(String username, UserSettings settings, List<Warning> warnings, Location location
+                        , Route route, List<Route> savedRoutes)
+    {
+        this.username = username;
+        this.settings = settings;
+        this.warnings = warnings;
+        this.location = location;
+        this.route = route;
+        this.savedRoutes = savedRoutes;
+    }
+
     public void setSettings(UserSettings settings) {
         this.settings = settings;
     }

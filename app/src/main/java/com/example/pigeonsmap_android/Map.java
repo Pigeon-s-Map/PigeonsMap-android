@@ -4,7 +4,17 @@ public class Map {
 
     Route currentRoute;
 
-    public void showWarningDetails(Warning warming)
+    public Map()
+    {
+        this.currentRoute = null;
+    }
+
+    public Map(Route currentRoute)
+    {
+        this.currentRoute = currentRoute;
+    }
+
+    public void showWarningDetails(Warning warning)
     {
 
     }

@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Database {
     String databaseConnectionInfo;
+
     public void fetchUserInfo()
     {
 
