@@ -5,6 +5,16 @@ import java.util.List;
 public class Database {
     String databaseConnectionInfo;
 
+    public Database()
+    {
+        this.databaseConnectionInfo = null;
+    }
+
+    public Database(String databaseConnectionInfo)
+    {
+        this.databaseConnectionInfo = databaseConnectionInfo;
+    }
+
     public void fetchUserInfo()
     {
 
