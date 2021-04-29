@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="224dp">
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="225dp">
 
         <LinearLayout
             android:id="@+id/ill"
@@ -44,10 +44,25 @@
 
         </LinearLayout>
 
+        <EditText
+            android:id="@+id/editTextStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Start Location"
+            android:inputType="textPersonName" />
+
         <Button
             android:id="@+id/addr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="+" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
