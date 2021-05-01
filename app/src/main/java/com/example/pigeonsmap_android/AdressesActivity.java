@@ -18,10 +18,14 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.Switch;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -43,9 +47,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.SortedMap;
 
 public class AdressesActivity extends AppCompatActivity {
     private ArrayList<EditText> addressBoxes;
+    private ArrayList<Spinner> priorityBoxes;
     private ArrayList<Intent> intents;
     private ArrayList<Place> places;
     private Button addAddressButton;
@@ -53,6 +59,11 @@ public class AdressesActivity extends AppCompatActivity {
     private boolean mLocationPermissionGranted = false;
     private String mStrLatLng = "";
     private EditText startEditText;
+    private ScrollView sv;
+    private LinearLayout layoutInScroll;
+
+    private Switch isCircularSw;
+    private Switch travelModeSw;
 
     private FusedLocationProviderClient fusedLocationProviderClient;
 
@@ -71,9 +82,13 @@ public class AdressesActivity extends AppCompatActivity {
         addAddressButton = (Button) findViewById(R.id.addr);
         doneButton = (Button) findViewById(R.id.done);
         startEditText = (EditText) findViewById(R.id.editTextStart);
+        isCircularSw = (Switch) findViewById(R.id.switch2);
+        travelModeSw = (Switch) findViewById(R.id.switch3);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         addressBoxes = new ArrayList<EditText>();
+        priorityBoxes = new ArrayList<>();
         intents = new ArrayList<Intent>();
+        sv = (ScrollView) findViewById(R.id.scroll);
         Context c = this;
         EditText et = new EditText(c);
         et.setFocusable(false);
@@ -90,6 +105,8 @@ public class AdressesActivity extends AppCompatActivity {
                 intents.add(intent);
             }
         });
+
+
         et.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,8 +122,19 @@ public class AdressesActivity extends AppCompatActivity {
         addressBoxes.add(et);
         Places.initialize(getApplicationContext(), "AIzaSyBQNaogf7a45cgWe4YcZcsp4IVIWdi78mg");
         layout.removeView(addAddressButton);
-        layout.addView(addressBoxes.get(1));
-        layout.addView(addAddressButton);
+        layoutInScroll = findViewById(R.id.inScrollLinear);
+        layoutInScroll.addView(addressBoxes.get(1));
+
+        Spinner dropdown = new Spinner(c);
+        String[] items = new String[]{"1", "2", "3", "4", "5"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
+        priorityBoxes.add(dropdown);
+
+        layoutInScroll.addView(dropdown);
+
+        layoutInScroll.addView(addAddressButton);
+        //sv.addView(layoutInScroll);
 
         addAddressButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,10 +154,22 @@ public class AdressesActivity extends AppCompatActivity {
                     }
                 });
                 addressBoxes.add(et);
+                layoutInScroll.addView(et);
                 //Places.initialize(getApplicationContext(), "AIzaSyBQNaogf7a45cgWe4YcZcsp4IVIWdi78mg");
-                layout.removeView(addAddressButton);
-                layout.addView(addressBoxes.get(addressBoxes.size() - 1));
-                layout.addView(addAddressButton);
+
+                layoutInScroll.removeView(addAddressButton);
+                //layout.addView(addressBoxes.get(addressBoxes.size() - 1));
+
+
+                Spinner dropdown = new Spinner(c);
+                String[] items = new String[]{"1", "2", "3", "4", "5"};
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, items);
+                dropdown.setAdapter(adapter);
+                priorityBoxes.add(dropdown);
+
+                layoutInScroll.addView(dropdown);
+
+                layoutInScroll.addView(addAddressButton);
             }
         });
 
@@ -161,8 +201,10 @@ public class AdressesActivity extends AppCompatActivity {
 
 
                 String mode;
-                // TODO
-                mode = "walking";
+                if(travelModeSw.isChecked())
+                    mode = "driving";
+                else
+                    mode = "walking";
 
                 String apiUrl = String.format("https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=%s&mode=%s&destinations=%s&key=AIzaSyBQNaogf7a45cgWe4YcZcsp4IVIWdi78mg&", latLonStr, mode, latLonStr);
                 System.out.println(apiUrl.length());
@@ -197,18 +239,16 @@ public class AdressesActivity extends AppCompatActivity {
                 }
 
                 // TODO
-                boolean circular = false;
+                boolean circular = isCircularSw.isChecked();
                 // Calculate route
                 ArrayList<Integer> best = new ArrayList<>();
                 int bestTime = -1;
 
-                // TODO
-                ArrayList priorities = new ArrayList();
+                ArrayList<Integer> priorities = new ArrayList<>();
 
-                ///////////////////////////////////////
-                for(int i = 0; i < mat.length; i++)
-                    priorities.add(5);
-                ////////////////////////////////////////
+                for(int i = 0; i < priorityBoxes.size(); i ++)
+                    priorities.add(Integer.valueOf(priorityBoxes.get(i).getSelectedItem().toString()));
+
 
                 // TODO
                 int k = 10;
@@ -220,9 +260,14 @@ public class AdressesActivity extends AppCompatActivity {
 
                 }
 
-
+                if(circular)
+                    places.add(places.get(0));
                 // Go to map page
-                startActivity(new Intent(AdressesActivity.this, MapActivity.class));
+                Intent nintent = new Intent(getBaseContext(), MapActivity.class);
+                nintent.putExtra("EXTRA_PLACES", places);
+                startActivity(nintent);
+
+                //startActivity(new Intent(AdressesActivity.this, MapActivity.class));
             }
         });
 

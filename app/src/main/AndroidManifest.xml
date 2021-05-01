@@ -20,7 +20,7 @@
         android:theme="@style/Theme.PigeonsMapandroid">
 
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/map_key"/>
-
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

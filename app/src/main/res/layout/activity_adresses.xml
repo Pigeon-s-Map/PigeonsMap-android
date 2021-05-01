@@ -26,21 +26,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Switch" />
+                android:showText="true"
+                android:textOff="Non-Circular"
+                android:textOn="Circular" />
 
             <Switch
                 android:id="@+id/switch3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Switch" />
+                android:showText="true"
+                android:textOff="Walking"
+                android:textOn="Driving" />
 
             <Button
                 android:id="@+id/done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="DONE" />
 
         </LinearLayout>
 
@@ -64,5 +68,17 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:visibility="invisible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/inScrollLinear"/>
+        </ScrollView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
