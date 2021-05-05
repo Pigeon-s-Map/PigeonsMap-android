@@ -1,0 +1,155 @@
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM__Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM__Default_Changelist_.xml	(revision 1e1b8b07280c4161edb2269a18009e70917d7a2d)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM__Default_Changelist_.xml	(revision 1e1b8b07280c4161edb2269a18009e70917d7a2d)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM_[Default_Changelist]" date="1617735075279" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 4/6/21 9:51 PM [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM_[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM_[Default_Changelist]/shelved.patch	(revision 1e1b8b07280c4161edb2269a18009e70917d7a2d)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM_[Default_Changelist]/shelved.patch	(revision 1e1b8b07280c4161edb2269a18009e70917d7a2d)
+@@ -1,31 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AndroidLayouts\">\n    <shared>\n      <config />\n    </shared>\n  </component>\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"BRANCH:origin/main\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </select>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"80de0c36-205d-47ed-94ce-2b139db0af6f\" name=\"Default Changelist\" comment=\"test2\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[]\" />\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1npf6jAKPT1HKNTkoZfinqA45lt\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"AndroidSdkUpdater\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"android.template.966929904\">\n      <recent name=\"com.example.pigeonsmap_android\" />\n    </key>\n    <key name=\"android.template.1473872650\">\n      <recent name=\"com.example.pigeonsmap_android\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"AndroidJUnit\" factoryName=\"Android JUnit\">\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_DIR$\" />\n      <method v=\"2\">\n        <option name=\"Android.Gradle.BeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\" activateToolWindowBeforeRun=\"false\">\n      <module name=\"PigeonsMap-android.app\" />\n      <option name=\"DEPLOY\" value=\"true\" />\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\n      <option name=\"ALL_USERS\" value=\"false\" />\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\n      <option name=\"MODE\" value=\"default_activity\" />\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\n      <option name=\"SKIP_NOOP_APK_INSTALLATIONS\" value=\"true\" />\n      <option name=\"FORCE_STOP_RUNNING_APP\" value=\"true\" />\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\n      <Auto>\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\n        <option name=\"WORKING_DIR\" value=\"\" />\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\n      </Auto>\n      <Hybrid>\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\n        <option name=\"WORKING_DIR\" value=\"\" />\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\n      </Hybrid>\n      <Java />\n      <Native>\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\n        <option name=\"WORKING_DIR\" value=\"\" />\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\n      </Native>\n      <Profilers>\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Sample Java Methods\" />\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\n      </Profilers>\n      <option name=\"DEEP_LINK\" value=\"\" />\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\n      <method v=\"2\">\n        <option name=\"Android.Gradle.BeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"80de0c36-205d-47ed-94ce-2b139db0af6f\" name=\"Default Changelist\" comment=\"\" />\n      <created>1612091779301</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1612091779301</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"init\">\n      <created>1612091851189</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1612091851189</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"added new activities\">\n      <created>1612093110663</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1612093110663</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"added new activities\">\n      <created>1612710993392</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1612710993392</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"implemented new address button\">\n      <created>1612714440621</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1612714440621</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"test\">\n      <created>1617734176940</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1617734176940</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"origin/main\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"init\" />\n    <MESSAGE value=\"added new activities\" />\n    <MESSAGE value=\"implemented new address button\" />\n    <MESSAGE value=\"test\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"test\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"528\" y=\"170\" width=\"374\" height=\"594\" key=\"#com.intellij.ide.util.MemberChooser\" timestamp=\"1612711573864\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"528\" y=\"170\" width=\"374\" height=\"594\" key=\"#com.intellij.ide.util.MemberChooser/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612711573864\" />\n    <state x=\"453\" y=\"212\" width=\"524\" height=\"510\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1612709430948\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"453\" y=\"212\" width=\"524\" height=\"510\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612709430948\" />\n    <state x=\"478\" y=\"210\" width=\"483\" height=\"514\" key=\"AndroidProcessChooserDialog\" timestamp=\"1612095398694\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"478\" y=\"210\" width=\"483\" height=\"514\" key=\"AndroidProcessChooserDialog/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612095398694\" />\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1612724170354\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.bottom/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612724170354\" />\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.center\" timestamp=\"1612724170353\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.center/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612724170353\" />\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.left\" timestamp=\"1612724170353\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.left/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612724170353\" />\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.right\" timestamp=\"1612724170354\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state width=\"1394\" height=\"72\" key=\"GridCell.Tab.0.right/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612724170354\" />\n    <state x=\"209\" y=\"98\" width=\"1022\" height=\"737\" key=\"SettingsEditor\" timestamp=\"1612096829901\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"209\" y=\"98\" width=\"1022\" height=\"737\" key=\"SettingsEditor/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1612096829901\" />\n    <state x=\"315\" y=\"199\" width=\"800\" height=\"535\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1617734393072\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"315\" y=\"199\" width=\"800\" height=\"535\" key=\"Vcs.Push.Dialog.v2/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1617734393072\" />\n    <state x=\"338\" y=\"250\" width=\"753\" height=\"434\" key=\"git4idea.merge.GitPullDialog\" timestamp=\"1617734376886\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"338\" y=\"250\" width=\"753\" height=\"434\" key=\"git4idea.merge.GitPullDialog/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1617734376886\" />\n    <state x=\"383\" y=\"214\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1617734568203\">\n      <screen x=\"0\" y=\"27\" width=\"1440\" height=\"873\" />\n    </state>\n    <state x=\"383\" y=\"214\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/0.27.1440.873/1440.132.1366.768@0.27.1440.873\" timestamp=\"1617734568203\" />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- .idea/workspace.xml	(revision 371b2467740402af7240824c9abf5e4dc06ecb1e)
+-+++ .idea/workspace.xml	(date 1617734981000)
+-@@ -46,7 +46,7 @@
+-   <component name="Git.Settings">
+-     <option name="RECENT_BRANCH_BY_REPOSITORY">
+-       <map>
+--        <entry key="$PROJECT_DIR$" value="master" />
+-+        <entry key="$PROJECT_DIR$" value="main" />
+-       </map>
+-     </option>
+-     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-@@ -251,10 +251,10 @@
+-       <screen x="0" y="27" width="1440" height="873" />
+-     </state>
+-     <state x="315" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1440.873/1440.132.1366.768@0.27.1440.873" timestamp="1617734393072" />
+--    <state x="338" y="250" width="753" height="434" key="git4idea.merge.GitPullDialog" timestamp="1617734376886">
+-+    <state x="338" y="250" width="763" height="434" key="git4idea.merge.GitPullDialog" timestamp="1617734832581">
+-       <screen x="0" y="27" width="1440" height="873" />
+-     </state>
+--    <state x="338" y="250" width="753" height="434" key="git4idea.merge.GitPullDialog/0.27.1440.873/1440.132.1366.768@0.27.1440.873" timestamp="1617734376886" />
+-+    <state x="338" y="250" width="763" height="434" key="git4idea.merge.GitPullDialog/0.27.1440.873/1440.132.1366.768@0.27.1440.873" timestamp="1617734832581" />
+-     <state x="383" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1617734568203">
+-       <screen x="0" y="27" width="1440" height="873" />
+-     </state>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1619075390000)
++++ .idea/vcs.xml	(date 1619075390000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"BRANCH:berdan\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </select>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"80de0c36-205d-47ed-94ce-2b139db0af6f\" name=\"Default Changelist\" comment=\"map\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <projects_view>\n          <tree_state>\n            <expand />\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"map\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"map\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 1e1b8b07280c4161edb2269a18009e70917d7a2d)
++++ .idea/workspace.xml	(date 1619079763000)
+@@ -25,7 +25,12 @@
+     </select>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="80de0c36-205d-47ed-94ce-2b139db0af6f" name="Default Changelist" comment="map" />
++    <list default="true" id="f306926a-3d54-4ab2-88ae-3522ae0b84d2" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_6_21_9_51_PM__Default_Changelist_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -51,11 +56,31 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="ProjectId" id="1rVy5YhnGEnA5AbunrsTr8kbwbH" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
++    <property name="project.structure.last.edited" value="Dependencies" />
++    <property name="project.structure.proportion" value="0.17" />
++    <property name="project.structure.side.proportion" value="0.2" />
++  </component>
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+   <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="f306926a-3d54-4ab2-88ae-3522ae0b84d2" name="Default Changelist" comment="" />
++      <created>1619075368973</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1619075368973</updated>
++    </task>
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -69,7 +94,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="master" />
++                        <option value="berdan" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -86,4 +111,14 @@
+     <MESSAGE value="map" />
+     <option name="LAST_COMMIT_MESSAGE" value="map" />
+   </component>
++  <component name="WindowStateProjectService">
++    <state x="240" y="201" width="950" height="537" key="#PSD" timestamp="1619079762860">
++      <screen x="0" y="32" width="1440" height="868" />
++    </state>
++    <state x="240" y="201" width="950" height="537" key="#PSD/0.32.1440.868/1440.132.1366.768@0.32.1440.868" timestamp="1619079762860" />
++    <state x="523" y="327" width="374" height="291" key="psd.choose.module.panel.dimension" timestamp="1619079745005">
++      <screen x="0" y="32" width="1440" height="868" />
++    </state>
++    <state x="523" y="327" width="374" height="291" key="psd.choose.module.panel.dimension/0.32.1440.868/1440.132.1366.768@0.32.1440.868" timestamp="1619079745005" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: .gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Sun Jan 31 14:16:20 EET 2021\ngradle.version=6.5\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gradle/buildOutputCleanup/cache.properties	(revision 1e1b8b07280c4161edb2269a18009e70917d7a2d)
++++ .gradle/buildOutputCleanup/cache.properties	(date 1619075691000)
+@@ -1,2 +1,2 @@
+-#Sun Jan 31 14:16:20 EET 2021
+-gradle.version=6.5
++#Thu Apr 22 10:14:51 EET 2021
++gradle.version=6.1.1
