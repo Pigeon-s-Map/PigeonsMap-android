@@ -3,9 +3,7 @@ package com.example.pigeonsmap_android;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
@@ -15,22 +13,17 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
-import android.os.Looper;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Switch;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -44,10 +37,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class AdressesActivity extends AppCompatActivity {
     private ArrayList<EditText> addressBoxes;
@@ -237,31 +231,90 @@ public class AdressesActivity extends AppCompatActivity {
                     }
                     System.out.println();
                 }
-
-                // TODO
                 boolean circular = isCircularSw.isChecked();
                 // Calculate route
                 ArrayList<Integer> best = new ArrayList<>();
                 int bestTime = -1;
 
                 ArrayList<Integer> priorities = new ArrayList<>();
+                priorities.add(10);
+                System.out.println( ((String) priorityBoxes.get(0).getSelectedItem()).length());
+                System.out.println("..............................................");
+                for(int i = 0; i < priorityBoxes.size(); i++)
+                    priorities.add( Integer.parseInt(priorityBoxes.get(i).getSelectedItem().toString()));
 
-                for(int i = 0; i < priorityBoxes.size(); i ++)
-                    priorities.add(Integer.valueOf(priorityBoxes.get(i).getSelectedItem().toString()));
+                //for(int i = 0; i < priorityBoxes.size(); i ++)
+                //    priorities.add(Integer.valueOf(priorityBoxes.get(i).getSelectedItem().toString()));
 
+                int k = calculateK(places.size());
 
-                // TODO
-                int k = 10;
+                // all combinations of route
+                ArrayList<ArrayList<Integer>> allRoutes = calculateAllCombinations(places.size() - 1);
+
 
                 ArrayList<ArrayList<Integer>> bestRoutes = new ArrayList<>();
-                ArrayList<Integer> routeTimes = new ArrayList<>();
-                for(int i = 0; i < mat.length; i ++)
-                {
+                ArrayList<Integer> bestTimes = new ArrayList<>();
 
+                for(int i = 0; i < allRoutes.size(); i ++ )
+                {
+                    ArrayList<Integer> currentRoute = allRoutes.get(i);
+
+                    if(currentRoute.get(0) != 0)
+                        continue;
+
+                    int currentTime = calculateTime(currentRoute, mat, circular);
+
+                    if( bestTimes.size() == 0) {
+                        bestTimes.add(currentTime);
+                        bestRoutes.add(currentRoute);
+                    }
+                    else {
+                        for (int j = 0; j < bestTimes.size(); j++) {
+                            if (currentTime < bestTimes.get(j)) {
+                                if (j == 0 && bestTimes.size() == k )
+                                    break;
+                                else {
+                                    bestTimes.add(j, currentTime);
+                                    bestRoutes.add(j, currentRoute);
+                                }
+                                if (bestTimes.size() > k) {
+                                    bestTimes.remove(0);
+                                    bestRoutes.remove(0);
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+
+                ArrayList<Integer> selected = null;
+                int bestCoef = 0;
+                for(int i = 0; i < bestRoutes.size(); i ++)
+                {
+                    int currentCoef = calculateCoef(bestRoutes.get(i), priorities);
+
+                    if(selected == null || currentCoef < bestCoef)
+                    {
+                        selected = bestRoutes.get(i);
+                        bestCoef = currentCoef;
+                        continue;
+                    }
                 }
 
                 if(circular)
-                    places.add(places.get(0));
+                {
+                    selected.add(0);
+                    //places.add(places.get(0));
+                }
+
+                ArrayList<Place> tempPlaces = new ArrayList<>();
+
+                for(int i = 0; i < selected.size(); i++)
+                    tempPlaces.add(places.get(selected.get(i)));
+
+                places = tempPlaces;
+
                 // Go to map page
                 Intent nintent = new Intent(getBaseContext(), MapActivity.class);
                 nintent.putExtra("EXTRA_PLACES", places);
@@ -271,6 +324,96 @@ public class AdressesActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private int calculateK(int n)
+    {
+        if(n <= 7)
+            return (n-1)*(n-1);
+        return (n-1)*(n-1)*(n-1);
+    }
+
+    private int calculateCoef( ArrayList<Integer> route, ArrayList<Integer> priorities)
+    {
+        ArrayList<Integer> prioritiesWithRouteOrder = new ArrayList<>();
+
+        for(int i = 0; i < priorities.size(); i ++)
+            prioritiesWithRouteOrder.add(priorities.get(route.get(i)));
+
+        ArrayList<Integer> sorted = new ArrayList<>();
+
+        for(int i = 0; i < prioritiesWithRouteOrder.size(); i ++)
+            sorted.add(prioritiesWithRouteOrder.get(i));
+
+        Collections.sort(sorted);
+
+        int coef = 0;
+        for(int i = 0; i < sorted.size(); i ++)
+        {
+            int priority = prioritiesWithRouteOrder.get(i);
+            for(int j = 0; j < sorted.size(); j ++)
+            {
+                if(sorted.get(j) == priority)
+                {
+                    int distance = j - i;
+                    if(distance < 0)
+                        distance *= -1;
+                    coef += distance;
+                    break;
+                }
+            }
+        }
+
+        return coef;
+    }
+
+    private ArrayList<ArrayList<Integer>> calculateAllCombinations(int n)
+    {
+        return foo(n);
+    }
+
+    static ArrayList<ArrayList<Integer>> fooHelper(ArrayList<Integer> nList){
+
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        if(nList.size() == 1) {
+            ArrayList<Integer> temp = new ArrayList<Integer>(nList);
+            result.add(temp);
+            return result;
+        }
+
+
+        for(int i:nList) {
+            ArrayList<Integer> temp = new ArrayList<Integer>(nList);
+            temp.remove(Integer.valueOf(i));
+
+            ArrayList<ArrayList<Integer>> possibleExtensions  = fooHelper(temp);
+
+            for(int j = 0; j < possibleExtensions.size(); ++j) {
+                ArrayList<Integer> toBeAdded = new ArrayList<Integer>();
+                toBeAdded.add(i);
+                toBeAdded.addAll(possibleExtensions.get(j));
+                result.add(toBeAdded);
+            }
+        }
+
+
+        return result;
+    }
+
+    static ArrayList<ArrayList<Integer>> foo(int n) {
+        ArrayList<Integer> whatWeHave = new ArrayList<Integer>();
+
+        for(int i = 1; i <= n; ++i) { //initialization loop
+            whatWeHave.add(i);
+        }
+
+        ArrayList<ArrayList<Integer>> result  = fooHelper(whatWeHave);
+
+        for(int i = 0; i < result.size(); ++i) {
+            result.get(i).add(0, 0);
+        }
+
+        return result;
     }
 
     private int calculateTime(ArrayList<Integer> route, long[][] mat, boolean circular)
@@ -283,6 +426,7 @@ public class AdressesActivity extends AppCompatActivity {
             time += mat[route.get(route.size()-1)][route.get(0)];
         return time;
     }
+
     private void getLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
