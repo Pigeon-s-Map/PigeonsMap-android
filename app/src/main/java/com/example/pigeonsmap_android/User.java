@@ -1,5 +1,7 @@
 package com.example.pigeonsmap_android;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.List;
 
 public class User {
@@ -54,7 +56,7 @@ public class User {
         return true;
     }
 
-    public boolean createWarning(String text, Location location, boolean isPrivate)
+    public boolean createWarning(String text, LatLng location, boolean isPrivate)
     {
         Warning newWarning = new Warning();
         newWarning.setLocation(location);

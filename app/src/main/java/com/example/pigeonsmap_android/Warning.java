@@ -1,23 +1,27 @@
 package com.example.pigeonsmap_android;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Warning {
     String text;
-    User user;
-    Location location;
+    String username;
+    LatLng location;
     boolean isPrivate;
+    int id;
 
     public Warning()
     {
         this.text=null;
-        this.user=null;
+        this.username=null;
         this.location = null;
         this.isPrivate = false;
     }
 
-    public Warning(String text, User user, Location location, boolean isPrivate )
+    public Warning(int id, String text, String username, LatLng location, boolean isPrivate )
     {
+        this.id = id;
         this.text = text;
-        this.user = user;
+        this.username = username;
         this.location = location;
         this.isPrivate = false;
     }
@@ -26,11 +30,15 @@ public class Warning {
         return text;
     }
 
-    public User getUser() {
-        return user;
+    public int getID() {
+        return id;
     }
 
-    public Location getLocation() {
+    public String getUsername() {
+        return username;
+    }
+
+    public LatLng getLocation() {
         return location;
     }
 
@@ -42,11 +50,11 @@ public class Warning {
         this.text = text;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(String user) {
+        this.username = user;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(LatLng location) {
         this.location = location;
     }
 
@@ -54,5 +62,6 @@ public class Warning {
         isPrivate = aPrivate;
     }
 
+    public void setID(int id){ this.id = id; }
 
 }

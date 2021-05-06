@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "927367484185",
+    "project_id": "pigeonmap-c1220",
+    "storage_bucket": "pigeonmap-c1220.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927367484185:android:534ee8dd88abc4ab62eb88",
+        "android_client_info": {
+          "package_name": "com.example.pigeonsmap_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927367484185-g32ar26ds2adv3pj7lers0sed03pftvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARvmbEACQqadfIuQHLyWEDIj8QkCSMi8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927367484185-g32ar26ds2adv3pj7lers0sed03pftvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
